@@ -29,9 +29,9 @@ process plink {
   set val(chromosome), file("chr${chromosome}.bed"), file("chr${chromosome}.fam"), file("chr${chromosome}.bim") into plinkOutChan
 
   """
-  plink --noweb --file ${pedFile.baseName} --chr $chromosome --make-bed --out chr${chromosome}
-  plink -bfile chr${chromosome} --list-duplicate-vars ids-only suppress-first
-  [[ -e "plink.dupvar" ]] && plink --bfile chr${chromosome} --exclude plink.dupvar --make-bed --out chr${chromosome}
+  plink-1.9 --noweb --file ${pedFile.baseName} --chr $chromosome --make-bed --out chr${chromosome}
+  plink-1.9 --bfile chr${chromosome} --list-duplicate-vars ids-only suppress-first
+  [[ -e "plink.dupvar" ]] && plink-1.9 --bfile chr${chromosome} --exclude plink.dupvar --make-bed --out chr${chromosome}
   """
 
 }
