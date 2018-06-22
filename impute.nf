@@ -1,6 +1,6 @@
-params.pedFile = 'TODO'
-params.mapFile = 'TODO'
-params.genticMapDir = 'TODO'
+params.pedFile = 's3://lifebit-test-data/hapmap/hapmap1.ped'
+params.mapFile = 's3://lifebit-test-data/hapmap/hapmap1.map'
+params.genticMapDir = 's3://lifebit-test-data/snp-imputation/ALL.integrated_phase1_SHAPEIT_16-06-14.nomono/'
 params.chromosomeSizesFile = 'b37.chrom.sizes'
 params.referenceHapsFilePattern = "ALL.chr%s.integrated_phase1_v3.20101123.snps_indels_svs.genotypes.nomono.haplotypes.gz"
 params.referenceLegendFilePattern = "ALL.chr%s.integrated_phase1_v3.20101123.snps_indels_svs.genotypes.nomono.legend.gz"
